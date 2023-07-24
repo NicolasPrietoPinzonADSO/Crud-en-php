@@ -16,7 +16,7 @@ $connection = $database->getConnection();
 //Creamos la instancia del modelo usuario y pasamos la conexion a la base de datos
 $userModel = new User($connection);
 //Creamos la instancia del modelo libro y le pasamos la conexion a la base de datos
-$actualizar = $userModel->getAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ $actualizar = $userModel->getAll();
                             <?php } ?>
                         </form>
                         <div class="text-center mt-2">
-                            <a href="guardar.php" class="btn btn-dark text-white w-100">Volver</a>
+                            <a href="../vistas/guardar.php" class="btn btn-dark text-white w-100">Volver</a>
                         </div>
                     </div>
                 </div>

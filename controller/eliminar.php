@@ -16,6 +16,7 @@ $userModel = new User($connection);
 
 if(isset($_POST['eliminar'])){
     $dato = $_POST['identificador'];
+    print_r($dato);
     $eliminar = $userModel->deleteUsuario($dato);
-    header('Location: ../vistas/listarEliminar.php');
+
 }

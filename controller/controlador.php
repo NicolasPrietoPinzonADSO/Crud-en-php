@@ -11,8 +11,6 @@ require_once('../model/User.php');
 // Incluimos la clase libro
 require_once('../model/Book.php');
 
-
-
 //Creamos la instancia de la clase conexion a la base de datos
 $database = new Database();
 //Llamamos el metodo conexion que es quien nos retorna la conexion a la base de datos
@@ -20,7 +18,6 @@ $connection = $database->getConnection();
 //Creamos la instancia del modelo usuario y pasamos la conexion a la base de datos
 $userModel = new User($connection);
 //Creamos la instancia del modelo libro y le pasamos la conexion a la base de datos
-
 $bookModel = new Book($connection);
 
 if (isset($_POST['nombre'])&&isset($_POST['apellido'])&&isset($_POST['email'])&&isset($_POST['cedula'])){

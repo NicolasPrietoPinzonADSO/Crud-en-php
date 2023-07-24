@@ -80,7 +80,12 @@ class User
         }
     }
 
-
+    public function consulta (){
+        $stm = $this->db->prepare("SELECT * FROM users WHERE id = :id");
+        $stm->bindValue(':id',$this->id);
+        $stm->execute();
+        return $stm->fetchAll();
+    }
     function getAll()
     {
         $stm = $this->db->prepare("SELECT * FROM users");
@@ -93,7 +98,6 @@ class User
         $consulta = $this->db->prepare("DELETE FROM users WHERE id = :id");
         $consulta->bindValue(":id", $id);
         $consulta->execute();
-        header('Location: ../vistas/listar.php');
     }
     function actualizarUsuario()
     {

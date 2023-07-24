@@ -3,17 +3,17 @@ require_once('../model/User.php');
 require_once('../config/config.php');
 require_once('../libs/Database.php');
 
-$database   = new Database();
+$database = new Database();
 $connection = $database->getConnection();
 $userModel = new User($connection);
 
-
+if (isset($_POST['actualizar'])){
 $dato = $_POST['identificador'];
+$userModel->setId($dato);
+$actualizar = $userModel->consulta();
+}
 
-
-$userModel->setId($dato);    
-
-include_once('../vistas/update.php');
+require_once('../vistas/update.php');
 
 if (isset($_POST['envio_edit'])) {
     $nombre = $_POST["nombre"];

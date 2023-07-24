@@ -38,13 +38,10 @@
                                 <input type="text" name="cedula" id="cedula" class="form-control">
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-warning w-100 " id="enviar">Enviar</button>
+                                <button type="submit" class="btn btn-warning w-100 " id="enviar">Enviar</button>
                             </div>
                             <div>
-                                <a class="btn btn-warning w-100 mt-4" href="listarEliminar.php">Eliminar</a>
-                            </div>
-                            <div>
-                                <a class="btn btn-warning w-100 mt-4" href="update.php">Actualizar</a>
+                                <a class="btn btn-warning w-100 mt-4" href="listarEliminar.php">Listar</a>
                             </div>
                     </div>
                 </div>
