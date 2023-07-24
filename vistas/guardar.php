@@ -7,22 +7,20 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="../script/main.js" defer></script>
+
 </head>
 
 <body>
-
-
     <section class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-
-
                 <div class="card mt-4">
                     <div class="card-header">
                         <h1>Actualizar datos</h1>
                     </div>
                     <div class="card-body">
-                        <form action="../controller/controlador.php" method="post">
+                        <form action="../controller/controlador.php" method="post" id="form">
                             <div class="form-group mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
                                 <input type="text" name="nombre" id="nombre" class="form-control">
@@ -40,13 +38,13 @@
                                 <input type="text" name="cedula" id="cedula" class="form-control">
                             </div>
                             <div class="text-center">
-                                <button class="btn btn-warning w-100 ">Enviar</button>
+                                <button class="btn btn-warning w-100 " id="enviar">Enviar</button>
                             </div>
                             <div>
                                 <a class="btn btn-warning w-100 mt-4" href="listarEliminar.php">Eliminar</a>
                             </div>
                             <div>
-                                <a class="btn btn-warning w-100 mt-4" href="mostrar.php">Actualizar</a>
+                                <a class="btn btn-warning w-100 mt-4" href="update.php">Actualizar</a>
                             </div>
                     </div>
                 </div>

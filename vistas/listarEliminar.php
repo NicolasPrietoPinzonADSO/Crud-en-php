@@ -31,7 +31,7 @@
 
             // // Aquí se cargarán las dependencias del controlador también
             
-            $usuario = new User($conn);
+            $usuario = new User($connection);
             $users = $usuario->getAll();
             ?>
 

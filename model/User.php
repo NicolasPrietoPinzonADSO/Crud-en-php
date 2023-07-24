@@ -95,10 +95,17 @@ class User
         $consulta->execute();
         header('Location: ../vistas/listar.php');
     }
-    function actualizarUsuario($id)
+    function actualizarUsuario()
     {
-        $consulta = $this->db->prepare("UPDATE FROM users WHERE id = :id");
-    }
+            $stm=$this->db->prepare('UPDATE users SET firs_name = :nom , last_name = :apellido, email= :email, cedula = :cedula WHERE id = :id ');
+            $stm->bindValue(':nom', $this->nombre);
+            $stm->bindValue(':apellido', $this->apellido);
+            $stm->bindValue(':email', $this->email);
+            $stm->bindValue(':cedula', $this->cedula);
+            $stm->bindValue(':id',$this->id);  
+            $stm->execute();
+            header('Location:../vistas/guardar.php');
+   }
     // function addCedula()
     // {
     //     $stm = $this->db->prepare("UPDATE users
